@@ -10,7 +10,7 @@ require( './src/token_bucket' )
 local bucket = TokenBucket( 10, 2 ); -- capacity, rate (tok/sec)
 bucket:consume( 2 );
 print( bucket:getTokenCount() ) -- 8
-print( bucket:canConsume() ); -- true
+print( bucket:canConsume( 8 ) ); -- true
 ````
 
 ## Run tests
